@@ -1,21 +1,21 @@
 <?php
 
 class Pessoa{
-  private $nome;
+  private $nmPessoa;
   private $documento;
   private $idade;
 
-  public function __construct($nome,$documento,$idade){
-    $this->nome = $nome;
+  public function __construct($nmPessoa,$documento,$idade){
+    $this->nmPessoa = $nmPessoa;
     $this->documento = $documento;
     $this->idade = $idade;
   }
-  public function getNome(){
-    return $this->nome;
+  public function getNmPessoa(){
+    return $this->nmPessoa;
   }
 
-  public function setNome($nome){
-    $this->nome = $nome;
+  public function setNmPessoa($nmPessoa){
+    $this->nmPessoa = $nmPessoa;
   }
 
   public function getDocumento(){
@@ -29,7 +29,7 @@ class Pessoa{
   }
 
   public function __toString(){
-    return "Nome: ".$this->nome."\n".
+    return "Nome: ".$this->nmPessoa."\n".
     "Idade: ".$this->idade."\n".
     "Documento: ".$this->documento."\n";
   }

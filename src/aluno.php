@@ -4,14 +4,14 @@ class Aluno extends Pessoa{
   private $matricula;
   private $curso;
 
-  public function __construct($nome, $documento, $idade, $matricula, $curso){
-    parent::__construct($nome, $documento, $idade);
+  public function __construct($nmPessoa, $documento, $idade, $matricula, $curso){
+    parent::__construct($nmPessoa, $documento, $idade);
     $this->matricula = $matricula;
     $this->curso = $curso;
   }
 
   public function getMarticula(){
-    return $this->marticula;
+    return $this->matricula;
   }
 
   public function getCurso(){
@@ -27,6 +27,5 @@ class Aluno extends Pessoa{
     "Matricula: ".$this->matricula."\n".
     "Curso: ".$this->curso;
   }  
-  
-  
+
 }

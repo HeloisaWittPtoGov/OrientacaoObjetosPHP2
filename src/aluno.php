@@ -42,10 +42,10 @@ class Aluno extends Pessoa{
       }
     }
 
-    return parent::__toString().
+    return "<li>".parent::__toString().
     "Matricula: ".$this->matricula.",\n".
     "Curso: ".$this->curso."\n".
-     "Notas: ".$notaAluno;
+     "Notas: ".$notaAluno."<li>";
   }  
 
 }

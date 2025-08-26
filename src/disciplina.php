@@ -20,7 +20,9 @@ class Disciplina{
   }
 
   public function exibeAlunos(){
+    echo '<pre>'; 
     print_r($this->alunos);
+    echo '</pre>';
   }
 
   public function setProfessor($Professor){
@@ -30,7 +32,6 @@ class Disciplina{
   public function calculaMediaTurma(){
     $somaNotas= 0;
     $totaldeNotas = 0;
-    $mediaTurma = 0;
     foreach($this->alunos as $aluno){
       foreach($aluno->getNotas() as $notas){
         $somaNotas += $notas;
@@ -55,9 +56,9 @@ class Disciplina{
       }
     }
 
-    return "Disciplina: ".$this->nmDisciplina.",\n".
+    return '<li>'."Disciplina: ".$this->nmDisciplina.",\n".
     "Carga Horaria: ".$this->cargaHoraria."horas".",\n".
-    "Professor: ".$this->professor.",\n".
-    "Alunos: ".$alunoStr.",\n";
+    "Professor: ".$this->professor."\n".
+    "Alunos: ".$alunoStr.",\n"."<li>";
   }
 }

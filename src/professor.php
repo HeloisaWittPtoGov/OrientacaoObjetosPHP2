@@ -16,6 +16,6 @@ class Professor extends Pessoa {
   }
 
   public function __toString(){
-    return parent::__toString()."Especialidade: ".$this->especialidade;
+    return"<li>".parent::__toString()."Especialidade: ".$this->especialidade."<li>";
   }
 }

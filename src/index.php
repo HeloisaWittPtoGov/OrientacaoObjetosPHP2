@@ -21,6 +21,7 @@ $aluno1->addNota(9.5);
 $aluno3->addNota(7.5);
 $aluno2->addNota(5.5);
 $aluno4->addNota(4.5);
+$aluno3->addNota(9);
 
 $disciplina1->setProfessor($professor1);
 $disciplina2->setProfessor($professor2);
@@ -29,11 +30,11 @@ $disciplina1->exibeAlunos();
 
 $disciplina2->exibeAlunos();
 
-echo $disciplina1->__tostring();
+echo $disciplina1;
 
 echo "A media da turma e: ".$disciplina1->calculaMediaTurma();
 
-echo $disciplina2->__tostring();
+echo $disciplina2;
 echo "A media da turma e: ".$disciplina2->calculaMediaTurma();
 
 

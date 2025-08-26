@@ -37,15 +37,13 @@ class Aluno extends Pessoa{
     if(empty($this->notas)){
       $notaAluno = "Nenhuma Nota Informada";
     }else{
-      foreach($this->notas as $nota){
-        $notaAluno .=$nota."\n";
-      }
+      $notaAluno = implode(", ",$this->notas);
     }
 
-    return "<li>".parent::__toString().
-    "Matricula: ".$this->matricula.",\n".
-    "Curso: ".$this->curso."\n".
-     "Notas: ".$notaAluno."<li>";
+    return parent::__toString().
+    "Matricula: ".$this->matricula."<br>".
+    "Curso: ".$this->curso."<br>".
+     "Notas: ".$notaAluno;
   }  
 
 }

@@ -31,18 +31,18 @@ class Disciplina{
 
   public function calculaMediaTurma(){
     $somaNotas= 0;
-    $totaldeNotas = 0;
+    $totalNotas = 0;
     foreach($this->alunos as $aluno){
       foreach($aluno->getNotas() as $notas){
         $somaNotas += $notas;
-        $totaldeNotas++;
+        $totalNotas++;
       }
     }  
 
     if($totaldeNotal === 0){
-      return $mediaTurma;
+      return 0;
     } else{
-      return $somaNotas/$totaldeNotas;
+      return $somaNotas/$totalNotas;
     }
   }
 
@@ -52,13 +52,13 @@ class Disciplina{
       $alunoStr = "Nenhum aluno informado";
     }else{
       foreach($this->alunos as $aluno){
-        $alunoStr .= $aluno."\n";
+        $alunoStr .= $aluno."<br>";
       }
     }
 
-    return '<li>'."Disciplina: ".$this->nmDisciplina.",\n".
-    "Carga Horaria: ".$this->cargaHoraria."horas".",\n".
-    "Professor: ".$this->professor."\n".
-    "Alunos: ".$alunoStr.",\n"."<li>";
+    return "<br><br> Disciplina: ".$this->nmDisciplina."<br>".
+    "Carga Horaria: ".$this->cargaHoraria."horas"."<br>".
+    "Professor: ".$this->professor."<br>".
+    "Alunos: ".$alunoStr."<br>";
   }
 }

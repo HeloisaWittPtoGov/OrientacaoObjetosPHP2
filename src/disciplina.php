@@ -30,6 +30,7 @@ class Disciplina{
   public function calculaMediaTurma(){
     $somaNotas= 0;
     $totaldeNotas = 0;
+    $mediaTurma = 0;
     foreach($this->alunos as $aluno){
       foreach($aluno->getNotas() as $notas){
         $somaNotas += $notas;
@@ -37,8 +38,8 @@ class Disciplina{
       }
     }  
 
-    if($totaldeNotal == 0){
-      return 0;
+    if($totaldeNotal === 0){
+      return $mediaTurma;
     } else{
       return $somaNotas/$totaldeNotas;
     }

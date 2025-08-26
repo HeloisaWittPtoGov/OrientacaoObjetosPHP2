@@ -19,13 +19,15 @@ $aluno4 = $disciplina2->addAluno("Jorge",46532189651,20,00402025,"ESO");
 
 $aluno1->addNota(9.5);
 $aluno1->addNota(7.5);
+$aluno2->addNota(5.5);
+$aluno2->addNota(4.5);
 
 $disciplina1->setProfessor($professor1);
 $disciplina2->setProfessor($professor2);
 
 echo $disciplina1->__tostring();
 
-echo $disciplina1->calculaMediaTurma();
+echo "A media da turma e: ".$disciplina1->calculaMediaTurma();
 
 
 

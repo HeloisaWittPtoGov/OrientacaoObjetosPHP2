@@ -25,6 +25,8 @@ $disciplina2->setProfessor($professor2);
 
 echo $disciplina1->__tostring();
 
+echo $disciplina1->calculaMediaTurma();
+
 
 
 

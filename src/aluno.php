@@ -4,6 +4,8 @@ class Aluno extends Pessoa{
   private $matricula;
   private $curso;
 
+  private $notas = [];
+
   public function __construct($nmPessoa, $documento, $idade, $matricula, $curso){
     parent::__construct($nmPessoa, $documento, $idade);
     $this->matricula = $matricula;
@@ -22,10 +24,28 @@ class Aluno extends Pessoa{
     $this->curso = $curso;
   }
 
+  public function addNota($nota){
+    $this->notas[] = $nota;
+  }
+
+  public function getNotas(){
+    return $this->notas;
+  }
+
   public function __toString(){
+    $notaAluno = "";
+    if(empty($this->notas)){
+      $notaAluno = "Nenhuma Nota Informada";
+    }else{
+      foreach($this->notas as $nota){
+        $notaAluno .=$nota."\n";
+      }
+    }
+
     return parent::__toString().
     "Matricula: ".$this->matricula.",\n".
-    "Curso: ".$this->curso;
+    "Curso: ".$this->curso."\n".
+     "Notas: ".$notaAluno;
   }  
 
 }

@@ -16,6 +16,7 @@ class Disciplina{
   public function addAluno($nmPessoa, $documento, $idade, $matricula, $curso){
     $aluno = new Aluno($nmPessoa, $documento, $idade, $matricula, $curso);
     $this->alunos[] = $aluno;
+    return $aluno;
   }
 
   public function exibeAlunos(){
@@ -27,9 +28,18 @@ class Disciplina{
   }
 
   public function __tostring(){
+    $alunoStr = "";
+    if(empty($this->alunos)){
+      $alunoStr = "Nenhum aluno informado";
+    }else{
+      foreach($this->alunos as $aluno){
+        $alunoStr .= $aluno."\n";
+      }
+    }
+
     return "Disciplina: ".$this->nmDisciplina.",\n".
     "Carga Horaria: ".$this->cargaHoraria."horas".",\n".
     "Professor: ".$this->professor.",\n".
-    "Alunos: ".$alunos->aluno.",\n";
+    "Alunos: ".$alunoStr.",\n";
   }
 }

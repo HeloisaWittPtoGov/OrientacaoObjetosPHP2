@@ -29,9 +29,9 @@ class Pessoa{
   }
 
   public function __toString(){
-    return "Nome: ".$this->nmPessoa."\n".
-    "Idade: ".$this->idade."\n".
-    "Documento: ".$this->documento."\n";
+    return "Nome: ".$this->nmPessoa.",\n".
+    "Idade: ".$this->idade.",\n".
+    "Documento: ".$this->documento.",\n";
   }
 
 }

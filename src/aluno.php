@@ -22,9 +22,9 @@ class Aluno extends Pessoa{
     $this->curso = $curso;
   }
 
-  public function consultaDadosAluno(){
-    parent::__toString().
-    "Matricula: ".$this->matricula."\n".
+  public function __toString(){
+    return parent::__toString().
+    "Matricula: ".$this->matricula.",\n".
     "Curso: ".$this->curso;
   }  
 

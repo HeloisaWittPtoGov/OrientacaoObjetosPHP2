@@ -15,7 +15,7 @@ class Professor extends Pessoa {
   $this->especialidade = $especialidade;  
   }
 
-  public function consultaDadosProfessor(){
-    parent::__toString()."Especialidade: ".$this->especialidade;
+  public function __toString(){
+    return parent::__toString()."Especialidade: ".$this->especialidade;
   }
 }

@@ -6,6 +6,13 @@ class Disciplina{
 
   private $alunos = [];
 
+  private $professor;
+
+  public function __construct($nmDisciplina, $cargaHoraria) {
+    $this->nmDisciplina = $nmDisciplina;
+    $this->cargaHoraria = $cargaHoraria;
+  }
+
   public function addAluno($nmPessoa, $documento, $idade, $matricula, $curso){
     $aluno = new Aluno($nmPessoa, $documento, $idade, $matricula, $curso);
     $this->alunos[] = $aluno;
@@ -15,14 +22,14 @@ class Disciplina{
     print_r($this->alunos);
   }
 
-  public function addProfessor($Professor){
+  public function setProfessor($Professor){
     $this->professor = $Professor;
   }
 
-public function exibeResumoDisciplina(){
-  return "Disciplina: ".$this->nmDisciplina."\n".
-  "Carga Horária: ".$this->cargaHoraria."\n".
-  "Professor: ".$this->professor."\n".
-  "Alunos: ".$this->alunos."\n";
-}
+  public function __tostring(){
+    return "Disciplina: ".$this->nmDisciplina.",\n".
+    "Carga Horaria: ".$this->cargaHoraria."horas".",\n".
+    "Professor: ".$this->professor.",\n".
+    "Alunos: ".$alunos->aluno.",\n";
+  }
 }
